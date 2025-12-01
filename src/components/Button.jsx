@@ -15,10 +15,10 @@ class Button extends React.Component {
   render() {
     console.log("Button Component Rendered");
     const { change, locale } = this.props;
-    const { change } = this.props;
+
     return (
       <button type="button" onClick={() => change(locale)}>
-        Click Here (58.10)
+        Click Here
       </button>
     );
   }
