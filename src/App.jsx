@@ -1,6 +1,7 @@
 import Clock from "./components/Clock";
 import ClockList from "./components/ClockList";
 import Form from "./components/Form";
+import FormPractise from "./components/FormPractise";
 
 function App() {
   // const quantities = [1, 2, 3];
@@ -8,7 +9,8 @@ function App() {
     <>
       {/* <Clock /> */}
       {/* <ClockList quantity={quantities} /> */}
-      <Form />
+      {/* <Form /> */}
+      <FormPractise />
     </>
   );
 }

@@ -60,7 +60,7 @@ export default class Form extends React.Component {
 
             <textarea
               name="textArea"
-              type="text"
+              type="textarea"
               value={text}
               onChange={this.handleChange}
             ></textarea>
