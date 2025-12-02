@@ -1,3 +1,4 @@
+import Calculator from "./components/Calculator";
 import Clock from "./components/Clock";
 import ClockList from "./components/ClockList";
 import Form from "./components/Form";
@@ -10,7 +11,8 @@ function App() {
       {/* <Clock /> */}
       {/* <ClockList quantity={quantities} /> */}
       {/* <Form /> */}
-      <FormPractise />
+      {/* <FormPractise /> */}
+      <Calculator />
     </>
   );
 }
