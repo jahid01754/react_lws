@@ -1,13 +1,14 @@
-export function toCelsius(fahrenhiet) {
-  return ((fahrenhiet - 32) * 5) / 9;
+export function toCelsius({ fahrenheit }) {
+  return ((fahrenheit - 32) * 5) / 9;
 }
 
-export function toFahrenhiet(celsius) {
+export function toFahrenhiet({ celsius }) {
   return (celsius * 9) / 5 + 32;
 }
 
-export function convert(temperature, convertTo) {
+export function tempConverter(temperature, convertTo) {
   const input = parseFloat(temperature);
+
   if (Number.isNaN(input)) {
     return "";
   }
