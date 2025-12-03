@@ -1,3 +1,4 @@
+import CalculatorP from "./com/CalculatorP";
 import Calculator from "./components/Calculator";
 import Clock from "./components/Clock";
 import ClockList from "./components/ClockList";
@@ -13,6 +14,7 @@ function App() {
       {/* <Form /> */}
       {/* <FormPractise /> */}
       <Calculator />
+      <CalculatorP />
     </>
   );
 }

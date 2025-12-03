@@ -1,9 +1,15 @@
+import React from "react";
+
 const scaleNames = {
   c: "Celsius",
-  f: "Fahrenhiet",
+  f: "fahrenhiet",
 };
 
-function TemperatureInput({ scale, temperature, onTemperatureChange }) {
+export default function TemperatureInputP({
+  temperature,
+  scale,
+  onTemperatureChange,
+}) {
   return (
     <>
       <fieldset>
@@ -12,10 +18,8 @@ function TemperatureInput({ scale, temperature, onTemperatureChange }) {
           type="text"
           value={temperature}
           onChange={(e) => onTemperatureChange(e, scale)}
-        ></input>
+        />
       </fieldset>
     </>
   );
 }
-
-export default TemperatureInput;
