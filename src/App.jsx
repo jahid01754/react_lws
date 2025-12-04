@@ -13,6 +13,10 @@ import ClickCounter from "./components/ClickCounter";
 import HoverCounter from "./components/HoverCounter";
 import ClickCounterP from "./Practise/HOC/clickCounterP";
 import HoverCounterP from "./Practise/HOC/HoverCounterP";
+import ClickCounterPR from "./components/PropsRendering/ClickCounterPR";
+import HoverCounterPR from "./components/PropsRendering/HoverCounterPR";
+import User from "./components/PropsRendering/user";
+import CounterPR from "./components/PropsRendering/CounterPR";
 
 function App() {
   // const quantities = [1, 2, 3];
@@ -41,8 +45,18 @@ function App() {
       {/* <ClickCounter /> */}
       {/* <HoverCounter /> */}
 
-      <ClickCounterP />
-      <HoverCounterP />
+      {/* <ClickCounterP /> */}
+      {/* <HoverCounterP /> */}
+
+      <ClickCounterPR />
+      <HoverCounterPR />
+      {/* <User name={"Choion"} /> */}
+      {/* <User render={(isLoggedIn) => (isLoggedIn ? "Choion" : "Guest")} /> */}
+      <CounterPR
+        render={(counter, incrementCount) => (
+          <ClickCounterPR counter={counter} incrementCount={incrementCount} />
+        )}
+      />
     </>
   );
 }
