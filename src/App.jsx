@@ -9,6 +9,10 @@ import Text from "./components/composition/text";
 import Emoji from "./components/composition/Emoji";
 import Bracket from "./components/composition/Bracket";
 import BoilStatusCalculator from "./WaterStatus/BoilStatusCalculator";
+import ClickCounter from "./components/ClickCounter";
+import HoverCounter from "./components/HoverCounter";
+import ClickCounterP from "./Practise/HOC/clickCounterP";
+import HoverCounterP from "./Practise/HOC/HoverCounterP";
 
 function App() {
   // const quantities = [1, 2, 3];
@@ -21,7 +25,7 @@ function App() {
       {/* <Calculator /> */}
       {/* <CalculatorP /> */}
       {/* <Text /> */}
-      <Emoji>
+      {/* <Emoji>
         {({ addEmoji }) => (
           <Bracket>
             {({ addBracket }) => (
@@ -29,10 +33,16 @@ function App() {
             )}
           </Bracket>
         )}
-      </Emoji>
-      <br></br>
-      <br></br>
-      <BoilStatusCalculator />
+      </Emoji> */}
+      {/* <br></br>
+      <br></br> */}
+      {/* <BoilStatusCalculator /> */}
+
+      {/* <ClickCounter /> */}
+      {/* <HoverCounter /> */}
+
+      <ClickCounterP />
+      <HoverCounterP />
     </>
   );
 }
