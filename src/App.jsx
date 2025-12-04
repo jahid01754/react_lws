@@ -48,8 +48,9 @@ function App() {
       {/* <ClickCounterP /> */}
       {/* <HoverCounterP /> */}
 
-      <ClickCounterPR />
-      <HoverCounterPR />
+      {/* <ClickCounterPR /> */}
+      {/* <HoverCounterPR /> */}
+
       {/* <User name={"Choion"} /> */}
       {/* <User render={(isLoggedIn) => (isLoggedIn ? "Choion" : "Guest")} /> */}
       <CounterPR
@@ -57,6 +58,17 @@ function App() {
           <ClickCounterPR counter={counter} incrementCount={incrementCount} />
         )}
       />
+
+      <CounterPR
+        render={(counter, incrementCount) => (
+          <HoverCounterPR counter={counter} incrementCount={incrementCount} />
+        )}
+      />
+
+      <br />
+      <br />
+
+      <User name={(isLoggedIn) => (isLoggedIn ? "Choion" : "Guest")} />
     </>
   );
 }

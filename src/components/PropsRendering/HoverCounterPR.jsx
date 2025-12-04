@@ -22,26 +22,10 @@
 
 import React from "react";
 
-export default class HoverCounterPR extends React.Component {
-  state = {
-    count: 0,
-  };
-
-  incrementCount = () => {
-    this.setState((prevState) => ({
-      count: prevState.count + 1,
-    }));
-  };
-
-  render() {
-    const { count } = this.state;
-
-    // 18.02
-
-    return (
-      <>
-        <h1 onMouseOver={this.incrementCount}>Hovered {count} times</h1>
-      </>
-    );
-  }
+export default function HoverCounterPR({ counter, incrementCount }) {
+  return (
+    <>
+      <h1 onMouseOver={incrementCount}>Hovered {counter} times</h1>
+    </>
+  );
 }

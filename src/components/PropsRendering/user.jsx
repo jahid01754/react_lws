@@ -1,3 +1,3 @@
-export default function User({ render }) {
-  return `Hello there ${render(false)}`;
+export default function User({ name }) {
+  return `Hello there ${name(false)}`;
 }
