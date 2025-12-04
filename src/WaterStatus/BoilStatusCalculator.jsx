@@ -19,9 +19,9 @@ export default class BoilStatusCalculator extends React.Component {
     const { temperature, scale } = this.state;
 
     const celsius =
-      scale === "c" ? tempConverter(temperature, toFahrenhiet) : temperature;
-    const fahrenheit =
       scale === "f" ? tempConverter(temperature, toCelsius) : temperature;
+    const fahrenheit =
+      scale === "c" ? tempConverter(temperature, toFahrenhiet) : temperature;
 
     return (
       <>
@@ -36,7 +36,7 @@ export default class BoilStatusCalculator extends React.Component {
           scale={"f"}
         />
 
-        <BoilStatus celsius={parseFloat(temperature)} />
+        <BoilStatus celsius={parseFloat(celsius)} />
       </>
     );
   }
