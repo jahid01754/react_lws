@@ -17,19 +17,27 @@ import ClickCounterPR from "./components/PropsRendering/ClickCounterPR";
 import HoverCounterPR from "./components/PropsRendering/HoverCounterPR";
 import User from "./components/PropsRendering/user";
 import CounterPR from "./components/PropsRendering/CounterPR";
+import Section from "./components/PropsRendering/Section";
 
-function App() {
+import React from "react";
+class App extends React.Component {
   // const quantities = [1, 2, 3];
-  return (
-    <>
-      {/* <Clock /> */}
-      {/* <ClockList quantity={quantities} /> */}
-      {/* <Form /> */}
-      {/* <FormPractise /> */}
-      {/* <Calculator /> */}
-      {/* <CalculatorP /> */}
-      {/* <Text /> */}
-      {/* <Emoji>
+  state = {
+    theme: "dark",
+  };
+
+  render() {
+    const { theme } = this.state;
+    return (
+      <>
+        {/* <Clock /> */}
+        {/* <ClockList quantity={quantities} /> */}
+        {/* <Form /> */}
+        {/* <FormPractise /> */}
+        {/* <Calculator /> */}
+        {/* <CalculatorP /> */}
+        {/* <Text /> */}
+        {/* <Emoji>
         {({ addEmoji }) => (
           <Bracket>
             {({ addBracket }) => (
@@ -38,39 +46,51 @@ function App() {
           </Bracket>
         )}
       </Emoji> */}
-      {/* <br></br>
+        {/* <br></br>
       <br></br> */}
-      {/* <BoilStatusCalculator /> */}
+        {/* <BoilStatusCalculator /> */}
 
-      {/* <ClickCounter /> */}
-      {/* <HoverCounter /> */}
+        {/* <ClickCounter /> */}
+        {/* <HoverCounter /> */}
 
-      {/* <ClickCounterP /> */}
-      {/* <HoverCounterP /> */}
+        {/* <ClickCounterP /> */}
+        {/* <HoverCounterP /> */}
 
-      {/* <ClickCounterPR /> */}
-      {/* <HoverCounterPR /> */}
+        {/* <ClickCounterPR /> */}
+        {/* <HoverCounterPR /> */}
 
-      {/* <User name={"Choion"} /> */}
-      {/* <User render={(isLoggedIn) => (isLoggedIn ? "Choion" : "Guest")} /> */}
-      <CounterPR
-        render={(counter, incrementCount) => (
-          <ClickCounterPR counter={counter} incrementCount={incrementCount} />
-        )}
-      />
+        {/* <User name={"Choion"} /> */}
+        {/* <User render={(isLoggedIn) => (isLoggedIn ? "Choion" : "Guest")} /> */}
+        <CounterPR>
+          {(counter, incrementCount) => (
+            <ClickCounterPR counter={counter} incrementCount={incrementCount} />
+          )}
+        </CounterPR>
 
-      <CounterPR
-        render={(counter, incrementCount) => (
-          <HoverCounterPR counter={counter} incrementCount={incrementCount} />
-        )}
-      />
+        {/* <CounterPR>
+          {(counter, incrementCount) => (
+            <HoverCounterPR counter={counter} incrementCount={incrementCount} />
+          )}
+        </CounterPR> */}
 
-      <br />
-      <br />
+        {/* <CounterPR>
+          {(counter, incrementCount) => (
+            <HoverCounterPR counter={counter} incrementCount={incrementCount} />
+          )}
+        </CounterPR> */}
 
-      <User name={(isLoggedIn) => (isLoggedIn ? "Choion" : "Guest")} />
-    </>
-  );
+        <br />
+        <br />
+
+        {/* <User name={(isLoggedIn) => (isLoggedIn ? "Choion" : "Guest")} /> */}
+
+        <br />
+        <br />
+
+        {/* <Section theme={theme} /> */}
+      </>
+    );
+  }
 }
 
 export default App;

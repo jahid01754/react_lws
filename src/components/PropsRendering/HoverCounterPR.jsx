@@ -22,10 +22,19 @@
 
 import React from "react";
 
-export default function HoverCounterPR({ counter, incrementCount }) {
+export default function HoverCounterPR({ counter, incrementCount, theme }) {
+  const style =
+    theme === "dark"
+      ? {
+          backgroundColor: "#000000",
+          color: "#ffffff",
+        }
+      : null;
   return (
     <>
-      <h1 onMouseOver={incrementCount}>Hovered {counter} times</h1>
+      <h1 onMouseOver={incrementCount} style={style}>
+        Hovered {counter} times
+      </h1>
     </>
   );
 }
