@@ -18,6 +18,7 @@ import HoverCounterPR from "./components/PropsRendering/HoverCounterPR";
 import User from "./components/PropsRendering/user";
 import CounterPR from "./components/PropsRendering/CounterPR";
 import Section from "./components/PropsRendering/Section";
+import ThemeContext from "./Contexts/themeContext";
 
 import React from "react";
 class App extends React.Component {
@@ -61,11 +62,16 @@ class App extends React.Component {
 
         {/* <User name={"Choion"} /> */}
         {/* <User render={(isLoggedIn) => (isLoggedIn ? "Choion" : "Guest")} /> */}
-        <CounterPR>
-          {(counter, incrementCount) => (
-            <ClickCounterPR counter={counter} incrementCount={incrementCount} />
-          )}
-        </CounterPR>
+        <div>
+          <CounterPR>
+            {(counter, incrementCount) => (
+              <ClickCounterPR
+                counter={counter}
+                incrementCount={incrementCount}
+              />
+            )}
+          </CounterPR>
+        </div>
 
         {/* <CounterPR>
           {(counter, incrementCount) => (
@@ -87,7 +93,9 @@ class App extends React.Component {
         <br />
         <br />
 
-        {/* <Section theme={theme} /> */}
+        <ThemeContext.Provider value={{ theme: theme }}>
+          <Section />
+        </ThemeContext.Provider>
       </>
     );
   }
