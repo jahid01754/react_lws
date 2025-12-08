@@ -25,6 +25,9 @@ import React from "react";
 import TodoPR from "./Practise/Hooks/TodoPR";
 import Todo from "./components/Hooks/UseState/Todo";
 import HookCounter from "./components/Hooks/UseState/HookCounter";
+import MyComponentClass from "./components/Hooks/UseEffect/MyComponentClass";
+import MyComponentFunction from "./components/Hooks/UseEffect/MyComponentFunction";
+import AppUE from "./components/Hooks/UseEffect/AppUE";
 
 class App extends React.Component {
   // const quantities = [1, 2, 3];
@@ -116,9 +119,13 @@ class App extends React.Component {
           <Section />
         </ThemeContext.Provider> */}
 
-        <TodoPR />
-        <Todo />
-        <HookCounter />
+        {/* <TodoPR /> */}
+        {/* <Todo /> */}
+        {/* <HookCounter /> */}
+
+        <MyComponentClass />
+        {/* <MyComponentFunction /> */}
+        <AppUE />
       </>
     );
   }
