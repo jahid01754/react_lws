@@ -21,24 +21,29 @@ import Section from "./components/PropsRendering/Section";
 import ThemeContext from "./Contexts/themeContext";
 
 import React from "react";
+
+import TodoPR from "./Practise/Hooks/TodoPR";
+import Todo from "./components/Hooks/UseState/Todo";
+import HookCounter from "./components/Hooks/UseState/HookCounter";
+
 class App extends React.Component {
   // const quantities = [1, 2, 3];
-  state = {
-    theme: "dark",
-    switchTheme: () => {
-      this.setState(({ theme }) => {
-        if (theme === "dark") {
-          return {
-            theme: "light",
-          };
-        } else {
-          return {
-            theme: "dark",
-          };
-        }
-      });
-    },
-  };
+  // state = {
+  //   theme: "dark",
+  //   switchTheme: () => {
+  //     this.setState(({ theme }) => {
+  //       if (theme === "dark") {
+  //         return {
+  //           theme: "light",
+  //         };
+  //       } else {
+  //         return {
+  //           theme: "dark",
+  //         };
+  //       }
+  //     });
+  //   },
+  // };
 
   render() {
     // const { theme,switchTheme } = this.state;
@@ -75,7 +80,7 @@ class App extends React.Component {
 
         {/* <User name={"Choion"} /> */}
         {/* <User render={(isLoggedIn) => (isLoggedIn ? "Choion" : "Guest")} /> */}
-        <div>
+        {/* <div>
           <CounterPR>
             {(counter, incrementCount) => (
               <ClickCounterPR
@@ -84,7 +89,7 @@ class App extends React.Component {
               />
             )}
           </CounterPR>
-        </div>
+        </div> */}
 
         {/* <CounterPR>
           {(counter, incrementCount) => (
@@ -98,18 +103,22 @@ class App extends React.Component {
           )}
         </CounterPR> */}
 
-        <br />
-        <br />
+        {/* <br />
+        <br /> */}
 
         {/* <User name={(isLoggedIn) => (isLoggedIn ? "Choion" : "Guest")} /> */}
 
-        <br />
-        <br />
+        {/* <br />
+        <br /> */}
 
         {/* <ThemeContext.Provider value={{ theme: theme, switchTheme: this.switchTheme }}> */}
-        <ThemeContext.Provider value={this.state}>
+        {/* <ThemeContext.Provider value={this.state}>
           <Section />
-        </ThemeContext.Provider>
+        </ThemeContext.Provider> */}
+
+        <TodoPR />
+        <Todo />
+        <HookCounter />
       </>
     );
   }
