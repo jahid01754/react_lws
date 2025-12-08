@@ -25,10 +25,23 @@ class App extends React.Component {
   // const quantities = [1, 2, 3];
   state = {
     theme: "dark",
+    switchTheme: () => {
+      this.setState(({ theme }) => {
+        if (theme === "dark") {
+          return {
+            theme: "light",
+          };
+        } else {
+          return {
+            theme: "dark",
+          };
+        }
+      });
+    },
   };
 
   render() {
-    const { theme } = this.state;
+    // const { theme,switchTheme } = this.state;
     return (
       <>
         {/* <Clock /> */}
@@ -93,7 +106,8 @@ class App extends React.Component {
         <br />
         <br />
 
-        <ThemeContext.Provider value={{ theme: theme }}>
+        {/* <ThemeContext.Provider value={{ theme: theme, switchTheme: this.switchTheme }}> */}
+        <ThemeContext.Provider value={this.state}>
           <Section />
         </ThemeContext.Provider>
       </>

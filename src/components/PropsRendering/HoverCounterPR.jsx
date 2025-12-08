@@ -22,7 +22,12 @@
 
 import React from "react";
 
-export default function HoverCounterPR({ counter, incrementCount, theme }) {
+export default function HoverCounterPR({
+  counter,
+  incrementCount,
+  theme,
+  switchTheme,
+}) {
   const style =
     theme === "dark"
       ? {
@@ -30,11 +35,16 @@ export default function HoverCounterPR({ counter, incrementCount, theme }) {
           color: "#ffffff",
         }
       : null;
+
+  console.log("HoverCounter Rendered");
   return (
     <>
       <h1 onMouseOver={incrementCount} style={style}>
         Hovered {counter} times
       </h1>
+      <button type="button" onClick={switchTheme}>
+        Change Theme
+      </button>
     </>
   );
 }
