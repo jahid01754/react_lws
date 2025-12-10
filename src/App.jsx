@@ -28,6 +28,7 @@ import HookCounter from "./components/Hooks/UseState/HookCounter";
 import MyComponentClass from "./components/Hooks/UseEffect/MyComponentClass";
 import MyComponentFunction from "./components/Hooks/UseEffect/MyComponentFunction";
 import AppUE from "./components/Hooks/UseEffect/AppUE";
+import AppUCB from "./components/Hooks/UseCallback/AppUCB";
 
 class App extends React.Component {
   // const quantities = [1, 2, 3];
@@ -123,9 +124,11 @@ class App extends React.Component {
         {/* <Todo /> */}
         {/* <HookCounter /> */}
 
-        <MyComponentClass />
+        {/* <MyComponentClass /> */}
         {/* <MyComponentFunction /> */}
-        <AppUE />
+        {/* <AppUE /> */}
+
+        <AppUCB />
       </>
     );
   }
