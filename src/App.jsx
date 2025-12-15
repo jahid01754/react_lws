@@ -30,6 +30,7 @@ import MyComponentFunction from "./components/Hooks/UseEffect/MyComponentFunctio
 import AppUE from "./components/Hooks/UseEffect/AppUE";
 import AppUCB from "./components/Hooks/UseCallback/AppUCB";
 import AppUseRef from "./components/Hooks/UseRef/AppUseRef";
+import AppUseReducer from "./components/Hooks/UseReducer/AppUseReducer";
 
 class App extends React.Component {
   // const quantities = [1, 2, 3];
@@ -131,6 +132,9 @@ class App extends React.Component {
 
         <AppUCB />
         <AppUseRef />
+        <br />
+        <br />
+        <AppUseReducer />
       </>
     );
   }
