@@ -1,6 +1,8 @@
 import React from "react";
 import { useReducer } from "react";
 import ComponentA from "./ComponentA";
+import GetPost from "./GetPost";
+import GetPost2 from "./GetPost2";
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const counterContext = React.createContext();
@@ -26,6 +28,14 @@ export default function App() {
         <counterContext.Provider value={{ countDispatch: dispatch }}>
           <ComponentA />
         </counterContext.Provider>
+      </div>
+
+      <div>
+        <GetPost />
+      </div>
+
+      <div>
+        <GetPost2 />
       </div>
     </>
   );

@@ -6,9 +6,9 @@ import CounterThree from "./CounterThree";
 export default function AppUseReducer() {
   return (
     <>
-      <Counter />
-      <ComplexCounter />
-      <CounterThree />
+      {/* <Counter /> */}
+      {/* <ComplexCounter /> */}
+      {/* <CounterThree /> */}
       <App />
     </>
   );
